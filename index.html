@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberAI Decision - Demostración interactiva de Inteligencia Artificial aplicada a la toma de decisiones en ciberseguridad. Proyecto académico para Ingeniería Informática.">
+  <meta name="keywords" content="Inteligencia Artificial, Ciberseguridad, Ingeniería Informática, Toma de Decisiones, Simulación, Análisis de Riesgo">
+  <meta name="author" content="Proyecto Académico de Ingeniería Informática">
+  <meta name="theme-color" content="#070b14">
+  
+  <title>CyberAI Decision | IA para Apoyar Decisiones de Ciberseguridad</title>
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Accesibilidad: Enlace directo al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Fondo tecnológico ambiental con mallas de gradientes -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="header" id="header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a href="#hero" class="brand" aria-label="CyberAI Decision - Inicio">
+        <div class="brand-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4"/>
+            <path d="M12 16h.01"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CyberAI<span class="text-accent">Decision</span></span>
+          <span class="brand-tag">PROYECTO ACADÉMICO</span>
+        </div>
+      </a>
+
+      <!-- Menú de navegación -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li class="nav-item"><a href="#problema" class="nav-link">El Problema</a></li>
+        <li class="nav-item"><a href="#como-ayuda" class="nav-link">¿Cómo Ayuda la IA?</a></li>
+        <li class="nav-item"><a href="#simulador" class="nav-link">Simulador</a></li>
+        <li class="nav-item"><a href="#comparativa" class="nav-link">Comparativa</a></li>
+        <li class="nav-item"><a href="#conclusion" class="nav-link">Conclusión</a></li>
+        <li class="nav-item"><a href="#proyecto" class="nav-link">Proyecto</a></li>
+        <li class="nav-item nav-item-cta">
+          <a href="#simulador" class="btn btn-sm btn-primary">Probar Simulador</a>
+        </li>
+      </ul>
+
+      <!-- Botón menú móvil -->
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-content">
+
+    <!-- SECCIÓN 1: HERO / PORTADA -->
+    <section class="section hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Etiqueta académica con botón de tutorial -->
+          <div class="badge-academic-wrap">
+            <div class="badge-academic">
+              <span class="pulse-indicator" aria-hidden="true"></span>
+              <span>PROYECTO UNIVERSITARIO · INGENIERÍA INFORMÁTICA</span>
+            </div>
+            <button type="button" class="help-btn" data-help="hero" aria-label="Ver tutorial de uso de la sección Portada" title="¿Cómo usar esta sección?">?</button>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            Decisiones más <span class="gradient-text">inteligentes</span> para una seguridad más <span class="gradient-text-alt">fuerte</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Explora cómo la <strong>Inteligencia Artificial</strong> puede analizar información de seguridad y apoyar la toma de decisiones en entornos informáticos.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#simulador" class="btn btn-primary btn-glow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Probar simulación</span>
+            </a>
+            <a href="#problema" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Conocer el proyecto</span>
+            </a>
+          </div>
+
+          <!-- Métricas de contexto académico -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-value text-accent">0 a 100</span>
+              <span class="highlight-label">Puntuación de Riesgo</span>
+            </div>
+            <div class="highlight-separator" aria-hidden="true"></div>
+            <div class="highlight-item">
+              <span class="highlight-value text-accent-cyan">Reglas Dinámicas</span>
+              <span class="highlight-label">Análisis de Factores</span>
+            </div>
+            <div class="highlight-separator" aria-hidden="true"></div>
+            <div class="highlight-item">
+              <span class="highlight-value text-accent-violet">Human-in-the-Loop</span>
+              <span class="highlight-label">Asistencia al Analista</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel visual tecnológico interactivo -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="radar-card glass-panel">
+            <div class="radar-header">
+              <div class="radar-status">
+                <span class="status-dot"></span>
+                <span>TELEMETRÍA EN TIEMPO REAL</span>
+              </div>
+              <span class="tech-badge">SISTEMA SOC</span>
+            </div>
+
+            <!-- Gráfico central con escudo y ondas radar -->
+            <div class="radar-display">
+              <div class="radar-circle circle-1"></div>
+              <div class="radar-circle circle-2"></div>
+              <div class="radar-circle circle-3"></div>
+              <div class="radar-scanner"></div>
+
+              <div class="shield-center">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                  <line x1="12" y1="5" x2="12" y2="7"/>
+                  <line x1="12" y1="17" x2="12" y2="19"/>
+                  <line x1="5" y1="12" x2="7" y2="12"/>
+                  <line x1="17" y1="12" x2="19" y2="12"/>
+                </svg>
+              </div>
+
+              <!-- Puntos de eventos detectados -->
+              <div class="node-point node-1" title="Intento fallido"></div>
+              <div class="node-point node-2" title="IP foránea"></div>
+              <div class="node-point node-3" title="Privilegio sensible"></div>
+            </div>
+
+            <!-- Mini indicadores de telemetría -->
+            <div class="radar-footer">
+              <div class="radar-metric">
+                <span class="metric-num">99.4%</span>
+                <span class="metric-desc">Patrones evaluados</span>
+              </div>
+              <div class="radar-metric">
+                <span class="metric-num text-accent">0.18s</span>
+                <span class="metric-desc">Velocidad de cálculo</span>
+              </div>
+              <div class="radar-metric">
+                <span class="metric-num text-success">Activo</span>
+                <span class="metric-desc">Modo de soporte</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: EL PROBLEMA -->
+    <section class="section section-darker" id="problema" aria-labelledby="problema-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-tag">DESAFÍO OPERATIVO</span>
+            <button type="button" class="help-btn" data-help="problema" aria-label="Ver tutorial de la sección El Problema" title="¿Cómo usar esta sección?">?</button>
+          </div>
+          <h2 id="problema-title" class="section-title">El problema</h2>
+          <p class="section-subtitle">
+            En un entorno informático pueden generarse cientos de eventos de seguridad. Analizar manualmente cada evento puede tomar tiempo y dificultar la identificación de situaciones que requieren atención inmediata.
+          </p>
+        </div>
+
+        <div class="cards-grid cards-3">
+          
+          <!-- Tarjeta 1 -->
+          <article class="feature-card glass-card">
+            <div class="card-icon-wrap icon-cyan">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                <circle cx="5" cy="19" r="1"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Demasiados eventos</h3>
+            <p class="card-text">
+              Los sistemas pueden generar grandes cantidades de información.
+            </p>
+            <div class="card-academic-badge">
+              <span>Volumen de logs masivo</span>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="feature-card glass-card">
+            <div class="card-icon-wrap icon-violet">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Riesgos difíciles de detectar</h3>
+            <p class="card-text">
+              Algunos comportamientos pueden pasar desapercibidos si se analizan de forma aislada.
+            </p>
+            <div class="card-academic-badge">
+              <span>Correlación compleja</span>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="feature-card glass-card">
+            <div class="card-icon-wrap icon-amber">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Decisiones rápidas</h3>
+            <p class="card-text">
+              Los responsables necesitan priorizar qué situaciones requieren atención.
+            </p>
+            <div class="card-academic-badge">
+              <span>Priorización crítica</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: ¿CÓMO PUEDE AYUDAR LA IA? -->
+    <section class="section" id="como-ayuda" aria-labelledby="como-ayuda-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-tag">FLUJO DE PROCESAMIENTO</span>
+            <button type="button" class="help-btn" data-help="como-ayuda" aria-label="Ver tutorial de la sección ¿Cómo Ayuda la IA?" title="¿Cómo usar esta sección?">?</button>
+          </div>
+          <h2 id="como-ayuda-title" class="section-title">¿Cómo puede ayudar la IA?</h2>
+          <p class="section-subtitle">
+            Una solución basada en Inteligencia Artificial puede analizar patrones, identificar comportamientos inusuales y generar información estructurada que ayude al responsable de seguridad a responder oportunamente.
+          </p>
+        </div>
+
+        <!-- Flujo interactivo paso a paso -->
+        <div class="pipeline-container" role="region" aria-label="Flujo de decisión de Inteligencia Artificial">
+          <div class="pipeline-track" aria-hidden="true"></div>
+
+          <div class="pipeline-steps">
+            
+            <!-- Paso 1 -->
+            <div class="pipeline-step">
+              <div class="step-badge">01</div>
+              <div class="step-card glass-card">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <h3 class="step-title">DATOS</h3>
+                <p class="step-desc">Captura de intentos, dispositivos, horarios y tipos de acceso.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="pipeline-step">
+              <div class="step-badge">02</div>
+              <div class="step-card glass-card">
+                <div class="step-icon icon-cyan">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path></svg>
+                </div>
+                <h3 class="step-title">ANÁLISIS</h3>
+                <p class="step-desc">Correlación de múltiples factores y detección de anomalías.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="pipeline-step">
+              <div class="step-badge">03</div>
+              <div class="step-card glass-card">
+                <div class="step-icon icon-violet">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                </div>
+                <h3 class="step-title">NIVEL DE RIESGO</h3>
+                <p class="step-desc">Puntuación ponderada que clasifica la severidad del evento.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="pipeline-step">
+              <div class="step-badge">04</div>
+              <div class="step-card glass-card">
+                <div class="step-icon icon-amber">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <h3 class="step-title">RECOMENDACIÓN</h3>
+                <p class="step-desc">Sugerencias tácticas contextualizadas según la evidencia.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="pipeline-step">
+              <div class="step-badge step-badge-human">05</div>
+              <div class="step-card glass-card step-card-human">
+                <div class="step-icon icon-success">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+                </div>
+                <h3 class="step-title">DECISIÓN</h3>
+                <p class="step-desc">El analista humano valida y ejecuta la mitigación final.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Principio académico fundamental -->
+        <div class="academic-callout glass-panel">
+          <div class="callout-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div class="callout-content">
+            <h4 class="callout-title">Principio Fundamental: La IA como herramienta de apoyo</h4>
+            <p class="callout-text">
+              La Inteligencia Artificial <strong>no reemplaza al profesional de ciberseguridad</strong>. Su función en la Ingeniería Informática es procesar variables a alta velocidad, reducir la sobrecarga de alertas y proporcionar un marco de referencia cuantitativo para que las personas responsables tomen decisiones informadas con mayor rapidez y precisión.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: SIMULADOR INTERACTIVO -->
+    <section class="section section-simulator" id="simulador" aria-labelledby="simulador-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <div class="badge-simulator">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>MÓDULO INTERACTIVO PRINCIPAL</span>
+            </div>
+            <button type="button" class="help-btn" data-help="simulador" aria-label="Ver tutorial de uso del Simulador" title="¿Cómo usar este simulador?">?</button>
+          </div>
+          <h2 id="simulador-title" class="section-title">Simula una decisión de seguridad</h2>
+          <p class="section-subtitle">
+            Ingrese las características de un evento de seguridad y observe cómo una simulación basada en análisis de riesgo genera una recomendación.
+          </p>
+        </div>
+
+        <!-- Banner de simulación educativa -->
+        <div class="simulation-banner" role="note">
+          <div class="sim-banner-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <p>
+            <strong>Aviso de Simulación Académica:</strong> Este simulador utiliza un modelo conceptual de puntuación mediante reglas ponderadas para fines pedagógicos en Ingeniería Informática. No constituye un motor predictivo comercial real.
+          </p>
+        </div>
+
+        <!-- Escenarios preconfigurados para evaluación docente rápida -->
+        <div class="presets-wrapper">
+          <span class="presets-label">Escenarios rápidos para prueba docente:</span>
+          <div class="presets-buttons" role="group" aria-label="Escenarios predefinidos">
+            <button type="button" class="btn-preset" id="presetBruteForce" data-preset="bruteForce">
+              <span class="preset-icon">⚡</span>
+              <span>Ataque Fuerza Bruta</span>
+            </button>
+            <button type="button" class="btn-preset" id="presetNightAccess" data-preset="nightAccess">
+              <span class="preset-icon">🌙</span>
+              <span>Intrusión Nocturna</span>
+            </button>
+            <button type="button" class="btn-preset" id="presetRoutine" data-preset="routine">
+              <span class="preset-icon">🛡️</span>
+              <span>Acceso Normal</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Estructura del Simulador: Formulario + Panel de Resultado -->
+        <div class="simulator-layout">
+          
+          <!-- Formulario de Entrada -->
+          <div class="simulator-form-col">
+            <div class="form-card glass-card">
+              
+              <div class="form-card-header">
+                <div class="form-header-title">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="11" y2="17"></line></svg>
+                  <h3>Parámetros del Evento</h3>
+                </div>
+                <span class="form-step-tag">Datos de Entrada</span>
+              </div>
+
+              <form id="securityEventForm" class="security-form" novalidate>
+                
+                <!-- A. Número de intentos fallidos -->
+                <div class="form-group">
+                  <div class="form-label-row">
+                    <label for="failedAttempts" class="form-label">
+                      A. Número de intentos fallidos
+                    </label>
+                    <span class="rule-hint" id="attemptsHint">(Valor inicial: 3)</span>
+                  </div>
+                  
+                  <div class="counter-input-wrap">
+                    <button type="button" class="btn-counter" id="btnDecrement" aria-label="Disminuir intentos fallidos">-</button>
+                    <input 
+                      type="number" 
+                      id="failedAttempts" 
+                      name="failedAttempts" 
+                      min="0" 
+                      max="50" 
+                      value="3" 
+                      class="form-control text-center" 
+                      aria-describedby="attemptsHelp"
+                      required
+                    >
+                    <button type="button" class="btn-counter" id="btnIncrement" aria-label="Aumentar intentos fallidos">+</button>
+                  </div>
+                  <small id="attemptsHelp" class="form-help">
+                    Ponderación: 0-2 (+5) | 3-5 (+15) | 6-10 (+25) | >10 (+35)
+                  </small>
+                </div>
+
+                <!-- B. Dispositivo desconocido -->
+                <fieldset class="form-group">
+                  <legend class="form-label">
+                    B. ¿El acceso proviene de un dispositivo desconocido?
+                  </legend>
+                  <div class="segmented-control" role="radiogroup" aria-label="Dispositivo desconocido">
+                    <label class="segmented-option">
+                      <input type="radio" name="unknownDevice" value="si">
+                      <span class="segmented-pill">
+                        <span class="opt-icon">⚠️</span> Sí (+20 pts)
+                      </span>
+                    </label>
+                    <label class="segmented-option">
+                      <input type="radio" name="unknownDevice" value="no" checked>
+                      <span class="segmented-pill">
+                        <span class="opt-icon">✓</span> No (+0 pts)
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- C. Ubicación inusual -->
+                <fieldset class="form-group">
+                  <legend class="form-label">
+                    C. ¿La ubicación del acceso es inusual?
+                  </legend>
+                  <div class="segmented-control" role="radiogroup" aria-label="Ubicación inusual">
+                    <label class="segmented-option">
+                      <input type="radio" name="unusualLocation" value="si">
+                      <span class="segmented-pill">
+                        <span class="opt-icon">📍</span> Sí (+20 pts)
+                      </span>
+                    </label>
+                    <label class="segmented-option">
+                      <input type="radio" name="unusualLocation" value="no" checked>
+                      <span class="segmented-pill">
+                        <span class="opt-icon">✓</span> No (+0 pts)
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- D. Fuera de horario habitual -->
+                <fieldset class="form-group">
+                  <legend class="form-label">
+                    D. ¿El acceso ocurrió fuera del horario habitual?
+                  </legend>
+                  <div class="segmented-control" role="radiogroup" aria-label="Fuera de horario">
+                    <label class="segmented-option">
+                      <input type="radio" name="offHours" value="si">
+                      <span class="segmented-pill">
+                        <span class="opt-icon">🕒</span> Sí (+15 pts)
+                      </span>
+                    </label>
+                    <label class="segmented-option">
+                      <input type="radio" name="offHours" value="no" checked>
+                      <span class="segmented-pill">
+                        <span class="opt-icon">✓</span> No (+0 pts)
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- E. Tipo de evento -->
+                <div class="form-group">
+                  <label for="eventType" class="form-label">
+                    E. Tipo de evento
+                  </label>
+                  <div class="select-wrapper">
+                    <select id="eventType" name="eventType" class="form-control form-select" required>
+                      <option value="login_sospechoso" selected>Inicio de sesión sospechoso</option>
+                      <option value="acceso_sensible">Acceso a información sensible (+15 pts)</option>
+                      <option value="cambio_clave">Cambio de contraseña</option>
+                      <option value="descarga_inusual">Descarga inusual</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                    <div class="select-arrow" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                  <small class="form-help">Eventos con información sensible elevan el impacto operativo.</small>
+                </div>
+
+                <!-- Botón de Análisis -->
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-block btn-analyze" id="btnAnalyze">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                    <span>Analizar evento</span>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- Panel de Resultados (SECCIÓN 5 y 6) -->
+          <div class="simulator-result-col" id="resultContainer">
+            <div class="result-card glass-card" id="resultCard" aria-live="polite">
+              
+              <div class="result-header">
+                <div class="result-title-row">
+                  <div class="result-badge-status" id="resultStatusBadge">
+                    <span class="status-pulse-dot" aria-hidden="true"></span>
+                    <span id="statusBadgeText">ANALIZADO POR REGLAS</span>
+                  </div>
+                  <div class="result-header-tools">
+                    <span class="model-id">MOTOR: CYBER-RISK-v1.0</span>
+                    <button type="button" class="help-btn help-btn-sm" data-help="resultado" aria-label="Ver tutorial del panel de resultados" title="¿Cómo interpretar este resultado?">?</button>
+                  </div>
+                </div>
+                <h3 class="result-heading">Resultado del Análisis</h3>
+              </div>
+
+              <!-- Indicador Central de Riesgo -->
+              <div class="risk-gauge-container">
+                <div class="gauge-wrapper">
+                  <!-- Círculo SVG animado -->
+                  <svg class="gauge-svg" width="180" height="180" viewBox="0 0 180 180" aria-hidden="true">
+                    <circle class="gauge-bg" cx="90" cy="90" r="74" />
+                    <circle class="gauge-progress" id="gaugeCircle" cx="90" cy="90" r="74" />
+                  </svg>
+                  
+                  <div class="gauge-center">
+                    <span class="gauge-caption">RIESGO</span>
+                    <div class="gauge-value" id="gaugeValueDisplay">
+                      <span id="scoreNumber">15</span><span class="gauge-max">/100</span>
+                    </div>
+                    <span class="gauge-status-tag risk-tag-low" id="riskLevelTag">RIESGO BAJO</span>
+                  </div>
+                </div>
+
+                <!-- Barra lineal complementaria para accesibilidad -->
+                <div class="risk-progress-bar-wrap">
+                  <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progressBarFill" style="width: 15%;"></div>
+                  </div>
+                  <div class="progress-bar-labels">
+                    <span>0: Bajo</span>
+                    <span>30: Medio</span>
+                    <span>60: Alto</span>
+                    <span>80: Crítico</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recomendación Dinámica -->
+              <div class="recommendation-box" id="recommendationBox">
+                <div class="rec-header">
+                  <div class="rec-icon" id="recIconWrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="rec-meta">
+                    <span class="rec-label">RECOMENDACIÓN ASISTIDA:</span>
+                    <h4 class="rec-title" id="recTitle">Nivel Operativo Aceptable</h4>
+                  </div>
+                </div>
+                <p class="rec-text" id="recommendationText">
+                  Continuar monitoreando el evento. No se identifican suficientes señales para una intervención inmediata.
+                </p>
+                <div class="rec-action-badge" id="recActionBadge">
+                  <span>Acción sugerida: Registrar telemetría habitual</span>
+                </div>
+              </div>
+
+              <!-- SECCIÓN 6: EXPLICACIÓN DEL RESULTADO -->
+              <div class="breakdown-section">
+                <h4 class="breakdown-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                  ¿Cómo llegó a esta recomendación?
+                </h4>
+                <p class="breakdown-subtitle">Factores identificados que aportaron a la puntuación de riesgo:</p>
+                
+                <ul class="factors-list" id="factorsList" aria-label="Lista de factores detectados">
+                  <!-- Se generará dinámicamente con JS -->
+                  <li class="factor-item">
+                    <span class="factor-name"><span class="factor-check">✓</span> 3 intentos fallidos</span>
+                    <span class="factor-points">+15 pts</span>
+                  </li>
+                </ul>
+
+                <div class="breakdown-summary">
+                  <span>Puntuación total acumulada:</span>
+                  <strong class="total-score-badge" id="totalPointsBadge">15 / 100</strong>
+                </div>
+              </div>
+
+              <!-- Botones de Acción del Resultado -->
+              <div class="result-actions">
+                <button type="button" class="btn btn-secondary btn-block" id="btnReset">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                  <span>Nuevo análisis</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: IA Y TOMA DE DECISIONES -->
+    <section class="section section-darker" id="comparativa" aria-labelledby="comparativa-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-tag">ANÁLISIS COMPARATIVO</span>
+            <button type="button" class="help-btn" data-help="comparativa" aria-label="Ver tutorial de la sección Comparativa" title="¿Cómo usar esta sección?">?</button>
+          </div>
+          <h2 id="comparativa-title" class="section-title">IA y Toma de Decisiones</h2>
+          <p class="section-subtitle">
+            Compara el impacto de abordar la ciberseguridad mediante métodos puramente manuales frente a un esquema con soporte inteligente.
+          </p>
+        </div>
+
+        <div class="comparison-grid">
+          
+          <!-- Columna Izquierda: Sin apoyo inteligente -->
+          <div class="comparison-card comp-manual glass-card">
+            <div class="comp-header">
+              <div class="comp-badge badge-manual">MÉTODO TRADICIONAL</div>
+              <h3 class="comp-title">Sin apoyo inteligente</h3>
+              <p class="comp-desc">Gestión manual y fragmentada de alertas de seguridad.</p>
+            </div>
+
+            <ul class="comp-list">
+              <li class="comp-list-item item-negative">
+                <div class="comp-icon-box">✕</div>
+                <div class="comp-item-content">
+                  <strong>Análisis manual:</strong>
+                  <span>Cada registro debe ser revisado individualmente por los operadores.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-negative">
+                <div class="comp-icon-box">✕</div>
+                <div class="comp-item-content">
+                  <strong>Mayor tiempo de revisión:</strong>
+                  <span>Tiempos de latencia elevados ante posibles brechas activas.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-negative">
+                <div class="comp-icon-box">✕</div>
+                <div class="comp-item-content">
+                  <strong>Dificultad para priorizar eventos:</strong>
+                  <span>Fatiga de alertas y riesgo de desatender incidentes graves.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-negative">
+                <div class="comp-icon-box">✕</div>
+                <div class="comp-item-content">
+                  <strong>Posibilidad de pasar por alto patrones:</strong>
+                  <span>Ataques distribuidos o silenciosos quedan ocultos en el ruido.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna Derecha: Con apoyo de IA -->
+          <div class="comparison-card comp-ai glass-card">
+            <div class="comp-header">
+              <div class="comp-badge badge-ai">ENFOQUE MODERNO</div>
+              <h3 class="comp-title">Con apoyo de IA</h3>
+              <p class="comp-desc">Procesamiento asistido mediante correlación automatizada.</p>
+            </div>
+
+            <ul class="comp-list">
+              <li class="comp-list-item item-positive">
+                <div class="comp-icon-box">✓</div>
+                <div class="comp-item-content">
+                  <strong>Análisis de grandes cantidades de datos:</strong>
+                  <span>Capacidad de sintetizar miles de eventos por segundo en tiempo real.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-positive">
+                <div class="comp-icon-box">✓</div>
+                <div class="comp-item-content">
+                  <strong>Identificación de patrones:</strong>
+                  <span>Reconocimiento de anomalías multi-variable y comportamiento atípico.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-positive">
+                <div class="comp-icon-box">✓</div>
+                <div class="comp-item-content">
+                  <strong>Priorización de eventos:</strong>
+                  <span>Puntuación objetiva de riesgo para focalizar los recursos humanos.</span>
+                </div>
+              </li>
+              <li class="comp-list-item item-positive">
+                <div class="comp-icon-box">✓</div>
+                <div class="comp-item-content">
+                  <strong>Recomendaciones basadas en información:</strong>
+                  <span>Sugerencias fundamentadas con trazabilidad de factores.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Aclaración importante sobre IA -->
+        <div class="disclaimer-banner">
+          <div class="disc-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <p>
+            <strong>Aclaración Académica:</strong> El uso de IA en ciberseguridad <strong>no garantiza decisiones infalibles</strong> ni exime de errores. La IA proporciona sugerencias basadas en reglas, modelos y datos probabilísticos; por ende, el juicio profesional, la ética y las políticas organizacionales siguen siendo indispensables.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 8: CONCLUSIÓN -->
+    <section class="section section-conclusion" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="container">
+        
+        <div class="conclusion-card glass-panel">
+          <div class="conclusion-badge-wrap">
+            <div class="conclusion-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>SÍNTESIS ACADÉMICA</span>
+            </div>
+            <button type="button" class="help-btn help-btn-sm" data-help="conclusion" aria-label="Ver guía de la conclusión" title="Guía para tu evaluación">?</button>
+          </div>
+
+          <h2 id="conclusion-title" class="conclusion-title">Conclusión</h2>
+
+          <blockquote class="conclusion-quote">
+            “La Inteligencia Artificial puede convertirse en una herramienta de apoyo para la <strong>Ingeniería Informática</strong> al permitir analizar información, identificar patrones y priorizar situaciones que requieren atención. En ciberseguridad, su utilidad está en complementar el trabajo de los profesionales y facilitar decisiones basadas en datos. Sin embargo, las recomendaciones deben ser revisadas y contextualizadas por una persona responsable.”
+          </blockquote>
+
+          <div class="conclusion-footer">
+            <div class="conclusion-tag">
+              <span class="tag-icon">📌</span>
+              <span>Enfoque Socio-Técnico: Colaboración Humano + IA</span>
+            </div>
+            <div class="conclusion-tag">
+              <span class="tag-icon">⚡</span>
+              <span>Optimización de Tiempo de Respuesta en SOC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 9: SOBRE EL PROYECTO -->
+    <section class="section" id="proyecto" aria-labelledby="proyecto-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag-row">
+            <span class="section-tag">FICHA TÉCNICA</span>
+            <button type="button" class="help-btn" data-help="proyecto" aria-label="Ver guía de la sección Sobre el Proyecto" title="Ficha académica">?</button>
+          </div>
+          <h2 id="proyecto-title" class="section-title">Sobre el Proyecto</h2>
+          <p class="section-subtitle">
+            Información del contexto institucional y curricular en el que se desarrolló esta propuesta interactiva.
+          </p>
+        </div>
+
+        <div class="academic-project-card glass-card">
+          <div class="academic-card-header">
+            <div class="academic-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="badge-status-dev">Desarrollado para evaluación académica</span>
+              <h3 class="academic-project-name">Proyecto académico</h3>
+            </div>
+          </div>
+
+          <div class="academic-details-grid">
+            
+            <div class="detail-block">
+              <span class="detail-label">CARRERA</span>
+              <strong class="detail-value text-accent">Ingeniería Informática</strong>
+            </div>
+
+            <div class="detail-block">
+              <span class="detail-label">ÁREA DE CONOCIMIENTO</span>
+              <strong class="detail-value">Inteligencia Artificial · Ciberseguridad · Análisis de datos</strong>
+            </div>
+
+            <div class="detail-block detail-full">
+              <span class="detail-label">OBJETIVO FORMATIVO</span>
+              <p class="detail-desc">
+                Demostrar mediante una simulación interactiva cómo los datos pueden utilizarse para apoyar decisiones dentro de un contexto informático.
+              </p>
+            </div>
+
+            <div class="detail-block detail-full">
+              <span class="detail-label">CARACTERÍSTICAS TÉCNICAS</span>
+              <div class="tech-tags">
+                <span class="tech-chip">HTML5 Semántico</span>
+                <span class="tech-chip">CSS3 Vanilla & Glassmorphism</span>
+                <span class="tech-chip">JavaScript ES6+ (Client-side)</span>
+                <span class="tech-chip">Tutoriales Interactivos (?)</span>
+                <span class="tech-chip">Cero Dependencias Externas</span>
+                <span class="tech-chip">100% Responsivo</span>
+                <span class="tech-chip">Compatible GitHub Pages & Netlify</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECCIÓN 10: FOOTER -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container footer-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="brand-name">CyberAI<span class="text-accent">Decision</span></span>
+          </div>
+          <p class="footer-tagline">
+            Ingeniería Informática · Proyecto académico
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero">Inicio</a>
+          <a href="#problema">El Problema</a>
+          <a href="#como-ayuda">¿Cómo Ayuda la IA?</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#comparativa">Comparativa</a>
+          <a href="#conclusion">Conclusión</a>
+          <a href="#proyecto">Proyecto</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-disclaimer">
+          <span class="disclaimer-dot" aria-hidden="true"></span>
+          <span>Simulación educativa — No representa un sistema real de detección de amenazas.</span>
+        </div>
+        <p class="footer-copy">
+          Desarrollado como prototipo interactivo para demostración curricular de Ingeniería Informática.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL TUTORIAL INTERACTIVO (?) -->
+  <div class="tutorial-modal-backdrop" id="tutorialModalBackdrop" aria-hidden="true">
+    <div class="tutorial-modal glass-panel" id="tutorialModal" role="dialog" aria-modal="true" aria-labelledby="modalTutorialTitle">
+      <div class="modal-header">
+        <div class="modal-header-tag">
+          <span class="modal-tag-icon">💡</span>
+          <span>TUTORIAL DE USO & GUÍA ACADÉMICA</span>
+        </div>
+        <button type="button" class="btn-modal-close" id="btnModalClose" aria-label="Cerrar tutorial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section-badge" id="modalSectionBadge">SECCIÓN: PORTADA</div>
+        <h3 class="modal-title" id="modalTutorialTitle">Título del Tutorial</h3>
+        
+        <div class="modal-content-block">
+          <h4 class="modal-subtitle">¿Para qué sirve esta sección?</h4>
+          <p class="modal-desc" id="modalSectionPurpose">Descripción del propósito educativo...</p>
+        </div>
+
+        <div class="modal-content-block">
+          <h4 class="modal-subtitle">Pasos para interactuar:</h4>
+          <ol class="modal-steps-list" id="modalStepsList">
+            <!-- Se llena dinámicamente con JavaScript -->
+          </ol>
+        </div>
+
+        <div class="modal-tip-box" id="modalTipBox">
+          <div class="modal-tip-icon">🎓</div>
+          <div class="modal-tip-content">
+            <strong>Tip clave para tu evaluación o defensa:</strong>
+            <p id="modalTipText">Texto del tip clave...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm btn-block" id="btnModalGotIt">¡Entendido!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script principal nativo -->
+  <script src="script.js"></script>
+</body>
+</html>
